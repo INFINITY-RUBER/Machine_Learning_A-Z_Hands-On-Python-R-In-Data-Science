@@ -14,7 +14,8 @@ dataset$Salary = ifelse(is.na(dataset$Salary),
 # Encoding categorical data
 dataset$Country = factor(dataset$Country,
                          levels = c('France', 'Spain', 'Germany'),
-                         labels = c(1, 2, 3))
-dataset$Purchased = factor(dataset$Purchased,
+                         labels = c(1, 2, 3)) # codificamos las ciudades en numeros de 1-3
+dataset$Purchased = factor(dataset$Purchased, # codificamos las Purchased en numeros de 0-1
                            levels = c('No', 'Yes'),
                            labels = c(0, 1))
+  
