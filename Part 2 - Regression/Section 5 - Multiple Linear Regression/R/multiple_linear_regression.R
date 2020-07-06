@@ -4,9 +4,9 @@
 dataset = read.csv('50_Startups.csv')
 
 # Encoding categorical data
-dataset$State = factor(dataset$State,
-                       levels = c('New York', 'California', 'Florida'),
-                       labels = c(1, 2, 3))
+  dataset$State = factor(dataset$State,
+                         levels = c('New York', 'California', 'Florida'),
+                         labels = c(1, 2, 3))
 
 # Splitting the dataset into the Training set and Test set
 # install.packages('caTools')
@@ -21,8 +21,8 @@ test_set = subset(dataset, split == FALSE)
 # test_set = scale(test_set)
 
 # Fitting Multiple Linear Regression to the Training set
-regressor = lm(formula = Profit ~ .,
-               data = training_set)
+  regressor = lm(formula = Profit ~ .,
+                 data = training_set)
 
 # Predicting the Test set results
 y_pred = predict(regressor, newdata = test_set)
