@@ -20,7 +20,7 @@ dataset = dataset[2:3]
 # install.packages('randomForest')
 library(randomForest)
 set.seed(1234)
-regressor = randomForest(x = dataset[-2],
+regressor = randomForest(x = dataset[1],
                          y = dataset$Salary,
                          ntree = 500)
 

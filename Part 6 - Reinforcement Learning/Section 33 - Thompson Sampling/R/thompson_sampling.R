@@ -31,7 +31,7 @@ for (n in 1:N) {
   }
   total_reward = total_reward + reward
 }
-
+  
 # Visualising the results
 hist(ads_selected,
      col = 'blue',
